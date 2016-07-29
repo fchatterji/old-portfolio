@@ -1,0 +1,244 @@
+/* GENERAL RULES */
+
+/*this makes the -moz-box sizing more elegant 
+check https://css-tricks.com/box-sizing/ for details*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: #999;
+  /* avoids underligned links */
+  color: #FF5C00;
+  transition: color 0.2s ease; }
+
+a:hover {
+  opacity:0.60; }
+
+body {
+  background-color: #333333;
+  color: #999;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  text-align: center; }
+
+@media screen and (min-width: 43.75em) {
+  body {
+    font-size: 1em;
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 65em; } }
+
+
+
+
+
+
+/* NAVIGATION */
+.nav {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.nav li {
+  margin: 0 5px 10px 0;
+  display: inline-block; }
+
+.nav a {
+  padding: 3px 12px;
+  text-decoration: none;
+  color: #999;
+  line-height: 100%; }
+
+.nav a:hover {
+  opacity: 0.6; }
+
+.nav .current a {
+  background: #999;
+  color: #fff;
+  border-radius: 5px; }
+
+@media screen and (max-width: 600px) {
+  .nav {
+    position: relative;
+    min-height: 40px; }
+
+  .nav ul {
+    width: 180px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff url("file:///C:/Users/fchatterji/Desktop/Audit%20CA%20Travaux%20BPU%202015/portfolio/css/images/icon-menu.png") no-repeat 10px 11px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+  .nav li {
+    display: none;
+    /* hide all <li> items */
+    margin: 0; }
+
+  .nav .current {
+    display: block;
+    /* show only current <li> item */ }
+
+  .nav a {
+    display: block;
+    padding: 5px 5px 5px 32px;
+    text-align: left; }
+
+  .nav .current a {
+    background: none;
+    color: #999; }
+
+  /* on nav hover */
+  .nav ul:hover {
+    background-image: none; }
+
+  .nav ul:hover li {
+    display: block;
+    margin: 0 0 5px; }
+
+  /* right nav */
+  .nav.right ul {
+    left: auto;
+    right: 0; }
+
+  /* center nav */
+  .nav.center ul {
+    left: 50%;
+    margin-left: -90px; } }
+
+
+
+
+
+
+
+/* BANNER */
+.banner {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1em; }
+
+@media screen and (min-width: 43.75em) {
+  .banner {
+    width: 65%; } 
+}
+
+.section-heading {
+  font-style: italic;
+  font-size: 1.125em;
+  line-height: 1.7em;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+
+
+
+
+
+/* GRID */
+.grid {
+  padding: 1.4375em 0em;
+  border-top: 3px double #999;
+  border-bottom: 3px double #999; }
+
+@media screen and (min-width: 43.75em) {
+  .grid-unit {
+    display: inline-block;
+    padding: 0.5em 1em; } }
+
+
+
+.thumbnail {
+  transition: opacity 0.3s;
+  margin-bottom: 1.5em; }
+
+.thumbnail:hover {
+  opacity: 0.65; }
+
+@media screen and (min-width: 43.75em) {
+  .thumbnail {
+    margin-bottom: 0.5em; } }
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 0.5em; }
+
+.project-name {
+  color: #999;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.125em;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+.role {
+  color: #999;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+
+
+
+/* CONTACT FORM */
+#contact {
+  width:40%;
+  margin: 20px auto;
+  display:inline-block;
+}
+
+label {
+  float:left;
+  padding: 10px;
+  margin: 15px 0px;
+}
+
+input, textarea {
+  float:right;
+  width: 70%;
+  padding: 10px;
+  margin: 15px 0px;
+}
+
+textarea {
+  height: 70px;  
+}
+
+#emailError, #fnameError, #messageError {
+  display: none;
+  clear:left;
+  clear:right;
+  float:right;
+  color:white;
+}
+
+
+
+/* FOOTER */
+.footer {
+  padding: 1em; }
+
+.footer > p {
+  display: inline-block;
+  line-height: 1.4em; }
+
+.copyright,
+.contact {
+  font-size: 0.8em; }
+
+@media screen and (min-width: 50em) {
+  .copyright {
+    float: left;
+    text-align: left; } }
+@media screen and (min-width: 50em) {
+  .contact {
+    float: right;
+    text-align: right; } }
+
